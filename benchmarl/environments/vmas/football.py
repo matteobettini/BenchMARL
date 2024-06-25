@@ -19,3 +19,4 @@ class TaskConfig:
     observe_adversaries: bool = MISSING
     dict_obs: bool = MISSING
     only_closest_agent_ball_reward: bool = MISSING
+    enable_shooting: bool = MISSING
