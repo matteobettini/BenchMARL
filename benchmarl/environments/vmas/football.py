@@ -20,3 +20,5 @@ class TaskConfig:
     dict_obs: bool = MISSING
     only_closest_agent_ball_reward: bool = MISSING
     enable_shooting: bool = MISSING
+    ball_max_speed: float = MISSING
+    u_shoot_multiplier: float = MISSING

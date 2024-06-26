@@ -13,3 +13,5 @@ observe_adversaries: True
 dict_obs: False
 only_closest_agent_ball_reward: False
 enable_shooting: False
+ball_max_speed: 0.3
+u_shoot_multiplier: 0.25
