@@ -814,7 +814,7 @@ class Experiment(CallbackNotifier):
             state=state,
             **{f"loss_{k}": item.state_dict() for k, item in self.losses.items()},
             **{
-                f"buffer_{k}": item.state_dict()
+                f"buffer_{k}": item.state_dict() if len(item) else None
                 for k, item in self.replay_buffers.items()
             },
         )
@@ -831,7 +831,10 @@ class Experiment(CallbackNotifier):
         """
         for group in self.group_map.keys():
             self.losses[group].load_state_dict(state_dict[f"loss_{group}"])
-            self.replay_buffers[group].load_state_dict(state_dict[f"buffer_{group}"])
+            if state_dict[f"buffer_{group}"] is not None and group != "agent_red":
+                self.replay_buffers[group].load_state_dict(
+                    state_dict[f"buffer_{group}"]
+                )
         if not self.config.collect_with_grad:
             self.collector.load_state_dict(state_dict["collector"])
         self.total_time = state_dict["state"]["total_time"]
@@ -854,6 +857,8 @@ class Experiment(CallbackNotifier):
 
     def _load_experiment(self) -> Experiment:
         """Load trainer from checkpoint"""
-        loaded_dict: OrderedDict = torch.load(self.config.restore_file)
+        loaded_dict: OrderedDict = torch.load(
+            self.config.restore_file, map_location=torch.device("cpu")
+        )
         self.load_state_dict(loaded_dict)
         return self
