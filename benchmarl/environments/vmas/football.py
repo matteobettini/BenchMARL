@@ -22,3 +22,5 @@ class TaskConfig:
     ball_max_speed: float = MISSING
     u_shoot_multiplier: float = MISSING
     ai_red_agents: bool = MISSING
+    ai_decision_strength: float = MISSING
+    ai_precision_strength: float = MISSING
