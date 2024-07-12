@@ -24,3 +24,4 @@ class TaskConfig:
     ai_red_agents: bool = MISSING
     ai_decision_strength: float = MISSING
     ai_precision_strength: float = MISSING
+    spawn_in_formation: bool = MISSING
