@@ -1,0 +1,7 @@
+defaults:
+  - vmas_rowing_config
+  - _self_
+
+max_steps: 200
+n_agents: 2
+observe_shared: True
