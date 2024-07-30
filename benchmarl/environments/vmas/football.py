@@ -25,3 +25,5 @@ class TaskConfig:
     ai_decision_strength: float = MISSING
     ai_precision_strength: float = MISSING
     spawn_in_formation: bool = MISSING
+    physically_different: bool = MISSING
+    formation_noise: float = MISSING
