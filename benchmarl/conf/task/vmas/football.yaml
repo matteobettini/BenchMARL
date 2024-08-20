@@ -20,3 +20,4 @@ ai_precision_strength: 1
 spawn_in_formation: False
 physically_different: False
 formation_noise: 0.1
+only_blue_formation: True

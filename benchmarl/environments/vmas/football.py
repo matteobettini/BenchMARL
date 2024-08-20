@@ -27,3 +27,4 @@ class TaskConfig:
     spawn_in_formation: bool = MISSING
     physically_different: bool = MISSING
     formation_noise: float = MISSING
+    only_blue_formation: bool = MISSING
