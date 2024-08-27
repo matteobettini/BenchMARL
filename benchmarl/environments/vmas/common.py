@@ -48,6 +48,7 @@ class VmasTask(Task):
     EMPTY = None
     FOOTBALL = None
     ROWING = None
+    ROWING_UNEMBODIED = None
 
     def get_env_fun(
         self,

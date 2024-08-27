@@ -1,0 +1,8 @@
+defaults:
+  - vmas_rowing_unembodied_config
+  - _self_
+
+max_steps: 200
+n_agents: 2
+agent_mass: 50
+sparse_rewards: False
