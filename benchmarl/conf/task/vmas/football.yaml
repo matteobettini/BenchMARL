@@ -22,3 +22,4 @@ physically_different: False
 formation_noise: 0.1
 only_blue_formation: True
 randomise_formation_indices: False
+formation_agents_per_column: 2
