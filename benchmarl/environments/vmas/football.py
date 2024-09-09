@@ -29,4 +29,4 @@ class TaskConfig:
     formation_noise: float = MISSING
     only_blue_formation: bool = MISSING
     randomise_formation_indices: bool = MISSING
-    formation_agents_per_colum: int = MISSING
+    formation_agents_per_column: int = MISSING
