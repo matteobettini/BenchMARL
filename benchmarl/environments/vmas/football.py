@@ -28,3 +28,4 @@ class TaskConfig:
     physically_different: bool = MISSING
     formation_noise: float = MISSING
     only_blue_formation: bool = MISSING
+    randomise_formation_indices: bool = MISSING
