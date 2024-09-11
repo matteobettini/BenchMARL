@@ -23,3 +23,6 @@ formation_noise: 0.1
 only_blue_formation: True
 randomise_formation_indices: False
 formation_agents_per_column: 2
+pos_shaping_factor_agent_ball: 0.1
+pos_shaping_factor_ball_goal: 10
+scoring_reward: 100

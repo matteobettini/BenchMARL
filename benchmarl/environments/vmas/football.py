@@ -30,3 +30,6 @@ class TaskConfig:
     only_blue_formation: bool = MISSING
     randomise_formation_indices: bool = MISSING
     formation_agents_per_column: int = MISSING
+    pos_shaping_factor_agent_ball: float = MISSING
+    pos_shaping_factor_ball_goal: float = MISSING
+    scoring_reward: float = MISSING
