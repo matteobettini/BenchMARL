@@ -506,7 +506,8 @@ class Experiment(CallbackNotifier):
                 else:
                     folder_name = Path(os.getcwd())
             self.name = generate_exp_name(
-                f"{self.algorithm_name}_{self.task_name}_{self.model_name}", ""
+                f"{self.algorithm_name}_{self.task_name}_{self.model_name}",
+                f"seed_{self.seed}",
             )
             self.folder_name = folder_name / self.name
             if (

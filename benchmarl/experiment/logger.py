@@ -12,6 +12,7 @@ from typing import Dict, List, Optional
 import numpy as np
 import torch
 import torchrl
+import wandb
 
 from tensordict import TensorDictBase
 from torch import Tensor
@@ -241,6 +242,11 @@ class Logger:
                     logger.log_video("eval/video", vid, fps=20, commit=False)
                 else:
                     logger.log_video("eval_video", vid, step=step)
+
+    def log_image(self, name, image):
+        for logger in self.loggers:
+            if isinstance(logger, WandbLogger):
+                self.log({name: wandb.Image(image)})
 
     def commit(self):
         for logger in self.loggers:
