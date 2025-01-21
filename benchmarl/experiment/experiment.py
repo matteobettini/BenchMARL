@@ -515,7 +515,7 @@ class Experiment(CallbackNotifier):
                 or self.config.checkpoint_interval > 0
                 or self.config.create_json
             ):
-                self.folder_name.mkdir(parents=False, exist_ok=False)
+                self.folder_name.mkdir(parents=True, exist_ok=True)
         else:
             self.folder_name = Path(self.config.restore_file).parent.parent.resolve()
             self.name = self.folder_name.name
